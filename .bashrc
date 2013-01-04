@@ -5,7 +5,7 @@ export MACHINE=`uname -m | sed -e 's/  */-/g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdef
 export PLATFORM="$MACHINE-$OS-$OSVERSION"
 
 # Set path
-export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:~/bin:$PATH"
 
 # Load the shell dotfiles
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
