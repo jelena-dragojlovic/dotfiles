@@ -1,4 +1,3 @@
-dotfiles
-========
+# My DotFiles project
 
-My config files
+These are config files to set up a system the way I like it.
