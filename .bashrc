@@ -5,7 +5,13 @@ export MACHINE=`uname -m | sed -e 's/  */-/g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdef
 export PLATFORM="$MACHINE-$OS-$OSVERSION"
 
 # Set path
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:~/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:~/bin:/Users/Aleksandar/Development/android-sdk/tools:$PATH"
+
+# Set Android path
+export ANDROID_BIN=/Users/Aleksandar/Development/android-sdk/tools/android
+
+# Set JRE path
+export JRE_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 
 # Load the shell dotfiles
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
@@ -38,6 +44,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
 # Welcome messsage
 echo -e "\033[0;32;40mKernel Information: " `uname -smr`

@@ -1,5 +1,18 @@
+###################
+# Generated files #
+###################
+.DS_Store
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+###################
 # Compiled source #
 ###################
+*.apk
+*.ap_
 *.com
 *.class
 *.dll
@@ -7,24 +20,14 @@
 *.o
 *.so
 
-# Logs #
-########
-*.log
-log/*
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store*
-ehthumbs.db
-Icon
-Icon?
-Thumbs.db
-
+###############
 # Other files #
 ###############
-*~
 .svn
+*~
+*.dex
 *.sw?
 *.tmproj
+local.properties
 tmp/
